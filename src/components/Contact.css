@@ -1,0 +1,133 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BACKGROUND BLOBS */
+.contact::before,
+.contact::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.contact::before {
+  width: 300px;
+  height: 300px;
+  background: #0ea5e9;
+  top: -100px;
+  left: -100px;
+}
+
+.contact::after {
+  width: 300px;
+  height: 300px;
+  background: #22c55e;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+  z-index: 2;
+}
+
+.contact-left h2 {
+  font-size: 36px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.contact-left p {
+  color: #475569;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* INFO */
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* SOCIAL */
+.contact-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-socials a {
+  text-decoration: none;
+  padding: 8px 14px;
+  background: rgba(14,165,233,0.1);
+  color: #0ea5e9;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.contact-socials a:hover {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* RIGHT FORM */
+.contact-right {
+  flex: 1;
+  z-index: 2;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* INPUTS */
+.contact-right input,
+.contact-right textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+/* BUTTON */
+.contact-right button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-right button:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .contact-socials {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,237 @@
+.projects {
+  padding: 100px 80px;
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+}
+
+.projects-title {
+  text-align: center;
+  color: #000;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* FILTER */
+.filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.project-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* INFO */
+.project-info {
+  padding: 15px;
+}
+
+.project-info h3 {
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.project-info p {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.project-info button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-info button:hover {
+  background: #0284c7;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+
+}
+
+/* TITLE BLACK */
+.overlay h3 {
+  color: #0f172a; /* black */
+  font-weight: bold;
+}
+
+/* DESCRIPTION SOFT */
+.overlay p {
+  color: #475569;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tags span {
+  background: #0ea5e9;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+/* VIEW ALL BUTTON */
+.view-all {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-all button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+}
+
+/* FULL MODAL */
+.modal-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: white;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+/* HEADER */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* FILTER */
+.filters {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.filters button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #0ea5e9;
+  color: white;
+}
+
+/* MODAL GRID */
+.modal-grid {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .modal-full {
+    padding: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 20px;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

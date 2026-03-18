@@ -1,0 +1,74 @@
+/* MAIN APP */
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background: linear-gradient(135deg, #dbeafe, #f8fafc, #ecfeff);
+}
+
+/* 🔥 BACKGROUND SHAPES */
+.bg-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 1; /* visible but behind content */
+  pointer-events: none;
+
+  animation: floatBg 12s ease-in-out infinite;
+}
+
+/* SHAPE 1 (TOP LEFT) */
+.shape1 {
+  width: 300px;
+  height: 300px;
+  background: #38bdf8;
+  top: -100px;
+  left: -100px;
+}
+
+/* SHAPE 2 (TOP RIGHT) */
+.shape2 {
+  width: 250px;
+  height: 250px;
+  background: #22c55e;
+  top: 20%;
+  right: -100px;
+}
+
+/* SHAPE 3 (BOTTOM CENTER) */
+.shape3 {
+  width: 300px;
+  height: 300px;
+  background: #6366f1;
+  bottom: -120px;
+  left: 40%;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatBg {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 🔥 ENSURE CONTENT ABOVE SHAPES */
+section,
+.navbar,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* REMOVE SECTION BACKGROUND */
+section {
+  background: transparent;
+  padding: 80px 5%;
+  margin: 0;
+}
+
+/* SCROLL FIX */
+section {
+  scroll-margin-top: 80px;
+}
